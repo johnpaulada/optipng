@@ -30,6 +30,9 @@
      /* The macros __unix and __unix__ are not predefined on Darwin. */
 #    define OSYS_UNIX
 #  endif
+#  define st_atim st_atimespec
+#  define st_ctim st_ctimespec
+#  define st_mtim st_mtimespec
 #endif
 
 #if defined WIN32 || defined _WIN32 || defined _WIN32_WCE || \
